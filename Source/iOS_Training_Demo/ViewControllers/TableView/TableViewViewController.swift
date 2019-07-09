@@ -13,9 +13,9 @@ class TableViewViewController: UIViewController {
     @IBOutlet weak var listView: UITableView!
     
     let students = [
-        StudentClass(name: "Hao", avatarUrl: "https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-619066144.jpg?itok=qc3nppWL"),
-        StudentClass(name: "Minh", avatarUrl: "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg"),
-        StudentClass(name: "Nghia", avatarUrl: "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg"),
+        Student(name: "Hao", avatarUrl: "https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/istock-619066144.jpg?itok=qc3nppWL"),
+        Student(name: "Minh", avatarUrl: "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg"),
+        Student(name: "Nghia", avatarUrl: "https://s16815.pcdn.co/wp-content/uploads/2017/06/iStock-609683672-studying.jpg"),
     ]
     
     override func viewDidLoad() {
@@ -39,5 +39,14 @@ extension TableViewViewController: UITableViewDataSource, UITableViewDelegate {
         cell?.setData(students[indexPath.row])
         return cell!
     }
-    
+}
+
+class Group {
+    var name: String!
+    var students: [Student]
+
+    init(name: String, students: [Student]) {
+        self.name = name
+        self.students = students
+    }
 }
