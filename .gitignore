@@ -20,6 +20,7 @@ Source/fastlane/report.xml
 *.perspectivev3
 !default.perspectivev3
 xcuserdata
+._*
 
 ## Other
 *.xccheckout
