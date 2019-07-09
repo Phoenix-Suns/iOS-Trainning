@@ -44,6 +44,4 @@ extension CollectionViewViewController: UICollectionViewDataSource, UICollection
         let width = (collectionView.bounds.width - 10.0 - 10.0 - 10.0) * 1/2
         return CGSize(width: width, height: width)
     }
-
-    
 }

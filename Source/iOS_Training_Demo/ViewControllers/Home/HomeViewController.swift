@@ -17,7 +17,9 @@ class HomeViewController: UIViewController {
         "Autolayout with SnapKit",
         "UITableView Custom Cell",
         "UICollectionView",
-        "Alamofire"
+        "Alamofire",
+        "UITableView with Header",
+        "Closure"
     ]
 
     override func viewDidLoad() {
@@ -27,7 +29,6 @@ class HomeViewController: UIViewController {
         self.listView.dataSource = self
         self.listView.delegate = self
     }
-
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
@@ -65,6 +66,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         if indexPath.row == 4 {
             let controller = AlamofireViewController(nibName: "AlamofireViewController", bundle: nil)
+            self.navigationController?.show(controller, sender: nil)
+        }
+
+        if indexPath.row == 5 {
+            let controller = TableViewWithHeaderViewController(nibName: "TableViewWithHeaderViewController", bundle: nil)
+            self.navigationController?.show(controller, sender: nil)
+        }
+        
+        if indexPath.row == 6 {
+            let controller = FirstViewController(nibName: "FirstViewController", bundle: nil)
             self.navigationController?.show(controller, sender: nil)
         }
     }

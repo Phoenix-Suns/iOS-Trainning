@@ -3,12 +3,12 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
-build/
-DerivedData
+Source/build/
+Source/DerivedData
 
 ## Fastlane
-fastlane/ipa
-fastlane/report.xml
+Source/fastlane/ipa
+Source/fastlane/report.xml
 
 ## Various settings
 *.pbxuser

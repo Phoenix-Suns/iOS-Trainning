@@ -23,7 +23,7 @@ class StudentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setData(_ student: StudentClass) {
+    func setData(_ student: Student) {
         self.studentNameLabel.text = student.name
         self.avataImageView.kf.indicatorType = .activity
         self.avataImageView.kf.setImage(with: URL(string: student.avatarUrl))
