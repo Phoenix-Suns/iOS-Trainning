@@ -13,30 +13,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FruitHeaderCell" customModule="iOS_Training_Demo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT1-dj-4NI">
-                    <rect key="frame" x="20" y="64" width="374" height="116"/>
-                    <color key="backgroundColor" red="0.67595869645386331" green="1" blue="0.17988837930277479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                    <color key="textColor" red="1" green="0.419262831" blue="0.27789660189999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-IR-CRM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT1-dj-4NI">
+                            <rect key="frame" x="20" y="20" width="374" height="117"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81430559615566311" green="0.87873196601867676" blue="0.87873196601867676" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="NT1-dj-4NI" firstAttribute="leading" secondItem="Hwi-IR-CRM" secondAttribute="leading" constant="20" id="6Yw-2L-Gfr"/>
+                        <constraint firstAttribute="trailing" secondItem="NT1-dj-4NI" secondAttribute="trailing" constant="20" id="RL0-82-Hdt"/>
+                        <constraint firstAttribute="bottom" secondItem="NT1-dj-4NI" secondAttribute="bottom" constant="20" id="THo-ta-t92"/>
+                        <constraint firstItem="NT1-dj-4NI" firstAttribute="top" secondItem="Hwi-IR-CRM" secondAttribute="top" constant="20" id="ekp-Ie-gzH"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="NT1-dj-4NI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="0k2-1S-EGN"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NT1-dj-4NI" secondAttribute="bottom" constant="20" id="cky-bg-O9v"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NT1-dj-4NI" secondAttribute="trailing" constant="20" id="mJ2-wt-Ui2"/>
-                <constraint firstItem="NT1-dj-4NI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="uxK-9w-Jxi"/>
+                <constraint firstItem="Hwi-IR-CRM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9mk-gT-foz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hwi-IR-CRM" secondAttribute="bottom" id="UdI-PY-jUk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hwi-IR-CRM" secondAttribute="trailing" id="ew2-0Z-lth"/>
+                <constraint firstItem="Hwi-IR-CRM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pAM-P5-GDR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="nameLabel" destination="NT1-dj-4NI" id="1U5-Fe-Hb6"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="81.026785714285708"/>
+            <point key="canvasLocation" x="131.8840579710145" y="66.629464285714278"/>
         </view>
     </objects>
 </document>

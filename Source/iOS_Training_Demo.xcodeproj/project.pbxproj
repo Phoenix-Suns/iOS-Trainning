@@ -591,7 +591,8 @@
 			baseConfigurationReference = BF0987C6D8B0E1A9BD1A0441 /* Pods-iOS_Training_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOS_Training_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -612,7 +613,8 @@
 			baseConfigurationReference = 91417E1136A78F4942E62030 /* Pods-iOS_Training_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOS_Training_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

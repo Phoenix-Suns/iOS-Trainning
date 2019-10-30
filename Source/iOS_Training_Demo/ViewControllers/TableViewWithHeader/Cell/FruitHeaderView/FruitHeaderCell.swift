@@ -9,11 +9,5 @@
 import UIKit
 
 class FruitHeaderCell: UITableViewHeaderFooterView {
-
     @IBOutlet weak var nameLabel: UILabel!
-    
-    func setData(groupFruit: GroupFruit) {
-        nameLabel.text = groupFruit.name
-    }
-
 }

@@ -22,8 +22,4 @@ class FruitTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    func setData(data: Fruit) {
-        nameLabel.text = data.name
-    }
 }

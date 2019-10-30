@@ -14,27 +14,11 @@ private let fruitHeaderId = "fruit_header"
 class TableViewWithHeaderViewController: UIViewController {
 
     @IBOutlet weak var fruitTableView: UITableView!
-    
-    var fruitList = [GroupFruit]()
+    var fruitList = GroupFruit.createGroupFruits()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        createVegetableGroup()
         setupTableView()
-    }
-
-    func createVegetableGroup() {
-        for i in 0...100 {
-            var fruits = [Fruit]()
-            for j in 0...5 {
-                fruits.append(Fruit(
-                    name: "Fruit \(j)",
-                    avatarUrl: "https://dictionary.cambridge.org/vi/images/thumb/tomato_noun_001_17860.jpg"
-                ))
-            }
-            fruitList.append(GroupFruit(name: "Group \(i)", vegetables: fruits))
-        }
     }
     
     func setupTableView() {
@@ -57,7 +41,7 @@ extension TableViewWithHeaderViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: fruitCellId) as? FruitTableViewCell
         let fruit = fruitList[indexPath.section].fruits[indexPath.row]
-        cell?.setData(data: fruit)
+        cell?.nameLabel.text = fruit.name
         return cell!
     }
     
@@ -69,7 +53,7 @@ extension TableViewWithHeaderViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: fruitHeaderId) as? FruitHeaderCell
         let groupFruit = fruitList[section]
-        cell?.setData(groupFruit: groupFruit)
+        cell?.nameLabel.text = groupFruit.name
         return cell
     }
 }
@@ -81,6 +65,21 @@ class GroupFruit {
     init(name: String, vegetables: [Fruit]) {
         self.name = name
         self.fruits = vegetables
+    }
+
+    static func createGroupFruits() -> [GroupFruit] {
+        var fruitList = [GroupFruit]()
+        for i in 0...100 {
+            var fruits = [Fruit]()
+            for j in 0...5 {
+                fruits.append(Fruit(
+                    name: "Fruit \(j)",
+                    avatarUrl: "https://dictionary.cambridge.org/vi/images/thumb/tomato_noun_001_17860.jpg"
+                ))
+            }
+            fruitList.append(GroupFruit(name: "Group \(i)", vegetables: fruits))
+        }
+        return fruitList
     }
 }
 
